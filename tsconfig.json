@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS",
+        "outDir": "dist",
+        "typeRoots": ["../node_modules/@types"],
+        "types": ["node"]
+    },
+    "include": [
+        "**/*.ts",
+        "*.ts",
+    ],
+    "exclude":["node-modules"],
+    "buildOnSave":true,
+    "compileOnSave": true
+}
