@@ -49,6 +49,29 @@ class RecipeController {
       )
       .catch((error) => console.error.bind(console, `Error ${error}`));
   }
+
+  addToFavorites(req, res){
+    const _id = req.params.id;
+
+    RecipeService.addToFavorites(_id)
+    .then((recipe)=>{
+      Helper.sendResponse(res, HttpStatus.OK, recipe);
+    })
+    .catch((error) => console.error.bind(console, `Error ${error}`));
+  }
+
+  getByCategory(req, res){
+    const category = req.params.category;
+    RecipeService.getByCategory(category)
+    .then((recipes)=>{
+      Helper.sendResponse(res, HttpStatus.OK, recipes);
+    })
+    .catch((error) => console.error.bind(console, `Error ${error}`))
+
+  }
+
+
+
 }
 
 export default new RecipeController();

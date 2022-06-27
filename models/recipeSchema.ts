@@ -9,6 +9,8 @@ const RecipeSchema = new mongoose.Schema({
     img: {type: String},
     publishDate: {type: Date},
     active: {type: Boolean},
+    preparationTime: {type: Number},
+    likes: {type: Number}
 });
 
 

@@ -31,6 +31,8 @@ class StartUp{
         this.app.route('/api/v1/recipe').post(RecipeController.create);
         this.app.route('/api/v1/recipe/:id').put(RecipeController.update);
         this.app.route('/api/v1/recipe/:id').delete(RecipeController.delete);
+        this.app.route('/api/v1/recipe/add-to-favorites/:id').post(RecipeController.addToFavorites);
+        this.app.route('/api/v1/recipe/category/:category').get(RecipeController.getByCategory)
     }
 }
 
